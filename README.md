@@ -15,8 +15,7 @@ curl -O https://raw.githubusercontent.com/ionoid-io-projects/workshop_dht11/mast
 Download for arm7
 
 ```
-curl -O
-https://raw.githubusercontent.com/ionoid-io-projects/workshop_dht11/master/bin/arm7/dht11
+curl -O https://raw.githubusercontent.com/ionoid-io-projects/workshop_dht11/master/bin/arm7/dht11
 ```
 
 Run program

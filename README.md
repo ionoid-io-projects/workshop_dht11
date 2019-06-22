@@ -39,6 +39,9 @@ chmod +x dht11
 sudo ./dht11
 ```
 
+## How to stop the program
+To quit or stop the program click on **Ctrl+C**
+
 # Ressources
 [Workshop Temperature and Humidty](https://github.com/opendevices/iot.apps/tree/master/workshop-temperature-humidty-dht11-dht22)
 

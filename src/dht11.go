@@ -24,7 +24,7 @@ func main() {
 	// sensorType := dht.DHT12
 	// Read DHT11 sensor data from specific pin, retrying 10 times in case of failure.
 	pin := 4
-	temperature, humidity, retried, err :=
+	temperature, humidity, _, err :=
 		dht.ReadDHTxxWithRetry(sensorType, pin, false, 10)
 	if err != nil {
 		lg.Fatal(err)
@@ -41,7 +41,7 @@ func main() {
 	for {
 		// print temperature and humidity
 		// lg.Infof("Sensor = %v: Temperature = %v*C, Humidity = %v%% (retried %d times)", sensorType, temperature, humidity, retried)
-		fmt.Printf("Temperature = %.2f *C, Humidity = %.2f",temperature,  humidity)
+		fmt.Printf("Temperature = %.2f *C, Humidity = %.2f \n",temperature,  humidity)
 		time.Sleep(time.Second * 2)
 	}
 	

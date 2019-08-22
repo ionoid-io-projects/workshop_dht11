@@ -1,6 +1,11 @@
 package main
 
 import (
+	"fmt"
+	"os"
+	"os/signal"
+	"syscall"
+	"time"
 	"github.com/d2r2/go-dht"
 
 	logger "github.com/d2r2/go-logger"
@@ -25,10 +30,19 @@ func main() {
 		lg.Fatal(err)
 	}
 
+	// Clean up on ctrl-c and turn lights out
+	c := make(chan os.Signal, 1)
+	signal.Notify(c, os.Interrupt, syscall.SIGTERM)
+	go func() {
+		<-c
+		os.Exit(0)
+	}()
+
 	for {
 		// print temperature and humidity
-		lg.Infof("Sensor = %v: Temperature = %v*C, Humidity = %v%% (retried %d times)",
-			sensorType, temperature, humidity, retried)
+		// lg.Infof("Sensor = %v: Temperature = %v*C, Humidity = %v%% (retried %d times)", sensorType, temperature, humidity, retried)
+		fmt.Printf("Temperature = %.2f *C, Humidity = %.2f",temperature,  humidity)
+		time.Sleep(time.Second * 2)
 	}
 	
 }

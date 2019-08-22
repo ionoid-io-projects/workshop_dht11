@@ -24,7 +24,11 @@ func main() {
 	if err != nil {
 		lg.Fatal(err)
 	}
-	// print temperature and humidity
-	lg.Infof("Sensor = %v: Temperature = %v*C, Humidity = %v%% (retried %d times)",
-		sensorType, temperature, humidity, retried)
+
+	for {
+		// print temperature and humidity
+		lg.Infof("Sensor = %v: Temperature = %v*C, Humidity = %v%% (retried %d times)",
+			sensorType, temperature, humidity, retried)
+	}
+	
 }

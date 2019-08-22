@@ -1,5 +1,5 @@
-name: udistance-env
+name: dht11-env
 version: 1.0
 apps:
-    led-blink:
-        command:    /bin/udistance
+    dht11-env:
+        command:    /bin/dht11

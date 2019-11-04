@@ -1,7 +1,17 @@
-# workshop_dht11
-Material for raspberry pi workshop
+# Workshop DHT11 (temperature and humidity sensor)
+The DHT11 sensor is a commonly used temperature and humidity sensor, in this workshop we will see how to use the DHT11 sensor and the Raspberry Pi to display temperature and humidity information.
 
-![wiring](doc/img/dht11.jpg)
+# Material for raspberry pi workshop
+
+![wiring](doc/img/dht112.jpg)
+
+|DHT11             |  raspberry pi  |
+|------------------|----------------|
+| Ground 		   | GND    (black) |
+| Vcc / + 		   | 3V     (red)   |
+| Signal     	   | GPIO 4 (blue)  |
+
+![wiring](doc/img/gpio.png)
 
 # Code
 

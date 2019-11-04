@@ -38,4 +38,4 @@ env GOOS=linux GOARCH=arm GOARM=6 go build dht11.go
 ```
 
 # Usage
-Copy the generated binary file to your raspberry pi and execute it
+Copy the generated binary file to your Raspberry Pi and execute it
